@@ -6,13 +6,13 @@ var blank = "https://www.math.ucla.edu/~tom/Games/blank.gif";
 var brown = "https://www.math.ucla.edu/~tom/Games/brown.jpeg";
 var poison = "https://www.math.ucla.edu/~tom/Games/poison.jpeg";
 
-var c=9;                //c = # columns.  Require 6 <= c <= 10.
+var c=8;                //c = # columns.  Require 6 <= c <= 10.
 var x,y;
-var 
-ppos=[1,12,23,34,45,56,113,122,224,235,246,336,355,1114,1125,1133,1222,2226,2255,2335];
-    //perfect play for c=7 is achieved by adding 
-    //67,257,347,477,2237,2357,2447,3377,3457,4557 to ppos. 
-    //but ppos must be arranged in increasing order. 
+var
+ppos=[1,12,23,34,45,56,78,113,122,224,235,246,268,336,355,448,1114,1125,1133,1222,2226,2248,2255,2335,2368,2458,2588,3338];
+    //perfect play for c=7 is achieved by adding
+    //67,257,347,477,2237,2357,2447,3377,3457,4557 to ppos.
+    //but ppos must be arranged in increasing order.
     //For c=8, add 78,268,448,2248,2368,2458,2588,3338.
 var n = [];
 var box = [];
@@ -32,7 +32,7 @@ function yourChoice(u,v) {
 	x=findMove();
 	Move(x,y+1);
 	if (box[1][2]+box[2][1]==0) alert("Nice try,\n but I won!");
-    }    
+    }
 }
 
 function Move(x,y) {
@@ -129,17 +129,16 @@ function playAgain() {
 <center>
 <hr size=5>
 <h1>CHOMP!</h1>
-<i>JavaScript</i>
 <hr size=5>
-The game of Chomp is like Russian Roulette for chocolate lovers.<br>A move 
-consists of chomping a square out of the chocolate bar<br>along with any 
+The game of Chomp is like Russian Roulette for chocolate lovers.<br>A move
+consists of chomping a square out of the chocolate bar<br>along with any
 squares to the right and above.<br>Players alternate moves.<p>
 
-The lower left square is poisoned though and the player forced to chomp 
+The lower left square is poisoned though and the player forced to chomp
 it loses.<p>
 
-Try your luck against the machine.<br>You chomp on a square by clicking on 
-the square with the mouse.<br>You move first.  You can win from the initial 
+Try your luck against the machine.<br>You chomp on a square by clicking on
+the square with the mouse.<br>You move first.  You can win from the initial
 position, but be careful!
 
 <SCRIPT LANGUAGE="JavaScript">
